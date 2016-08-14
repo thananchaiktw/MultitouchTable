@@ -160,15 +160,15 @@ namespace TableVision
             // 
             this.sourceImg.Location = new System.Drawing.Point(12, 44);
             this.sourceImg.Name = "sourceImg";
-            this.sourceImg.Size = new System.Drawing.Size(416, 304);
+            this.sourceImg.Size = new System.Drawing.Size(480, 304);
             this.sourceImg.TabIndex = 11;
             this.sourceImg.TabStop = false;
             // 
             // outputImg
             // 
-            this.outputImg.Location = new System.Drawing.Point(571, 44);
+            this.outputImg.Location = new System.Drawing.Point(507, 44);
             this.outputImg.Name = "outputImg";
-            this.outputImg.Size = new System.Drawing.Size(416, 304);
+            this.outputImg.Size = new System.Drawing.Size(480, 304);
             this.outputImg.TabIndex = 12;
             this.outputImg.TabStop = false;
             // 
@@ -219,12 +219,12 @@ namespace TableVision
             // 
             this.hptrackBar.LargeChange = 2;
             this.hptrackBar.Location = new System.Drawing.Point(1052, 179);
-            this.hptrackBar.Maximum = 200;
+            this.hptrackBar.Maximum = 100;
             this.hptrackBar.Name = "hptrackBar";
             this.hptrackBar.Size = new System.Drawing.Size(237, 45);
             this.hptrackBar.TabIndex = 7;
             this.hptrackBar.TickFrequency = 2;
-            this.hptrackBar.Value = 9;
+            this.hptrackBar.Value = 14;
             this.hptrackBar.Scroll += new System.EventHandler(this.hptrackBar_Scroll);
             // 
             // label1
@@ -263,12 +263,12 @@ namespace TableVision
             // 
             this.AmptrackBar.LargeChange = 2;
             this.AmptrackBar.Location = new System.Drawing.Point(1052, 351);
-            this.AmptrackBar.Maximum = 300;
+            this.AmptrackBar.Maximum = 150;
             this.AmptrackBar.Name = "AmptrackBar";
             this.AmptrackBar.Size = new System.Drawing.Size(237, 45);
             this.AmptrackBar.TabIndex = 21;
             this.AmptrackBar.TickFrequency = 2;
-            this.AmptrackBar.Value = 3;
+            this.AmptrackBar.Value = 95;
             this.AmptrackBar.Scroll += new System.EventHandler(this.AmptrackBar_Scroll);
             // 
             // amplabel
@@ -307,9 +307,9 @@ namespace TableVision
             this.bvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.bvalue.Location = new System.Drawing.Point(1284, 179);
             this.bvalue.Name = "bvalue";
-            this.bvalue.Size = new System.Drawing.Size(18, 20);
+            this.bvalue.Size = new System.Drawing.Size(27, 20);
             this.bvalue.TabIndex = 25;
-            this.bvalue.Text = "9";
+            this.bvalue.Text = "29";
             // 
             // nvalue
             // 
@@ -357,9 +357,9 @@ namespace TableVision
             this.tvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.tvalue.Location = new System.Drawing.Point(1284, 351);
             this.tvalue.Name = "tvalue";
-            this.tvalue.Size = new System.Drawing.Size(18, 20);
+            this.tvalue.Size = new System.Drawing.Size(36, 20);
             this.tvalue.TabIndex = 30;
-            this.tvalue.Text = "3";
+            this.tvalue.Text = "191";
             // 
             // label7
             // 

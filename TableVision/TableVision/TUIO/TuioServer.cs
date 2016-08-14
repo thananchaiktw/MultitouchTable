@@ -250,7 +250,7 @@ namespace TUIO
             OSCMessage msg = new OSCMessage("/tuio/2Dcur");
             msg.Append("alive");
             foreach (TuioCursor tcur in this.cursorList)
-                msg.Append(tcur.SessionID);
+                msg.Append((int)tcur.SessionID);
             //Console.WriteLine(msg.Values[1]);
             bundle.Append(msg);
         }
@@ -259,7 +259,7 @@ namespace TUIO
         {
             OSCMessage msg = new OSCMessage("/tuio/2Dcur");
             msg.Append("set");
-            msg.Append(tcur.SessionID);
+            msg.Append((int)tcur.SessionID);
             msg.Append(tcur.X);
             msg.Append(tcur.Y);
             msg.Append(tcur.XSpeed);
