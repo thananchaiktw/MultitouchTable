@@ -62,6 +62,15 @@ namespace TableVision
             this.label7 = new System.Windows.Forms.Label();
             this.ThresholdtrackBar = new System.Windows.Forms.TrackBar();
             this.thresholdvalue = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.mintrackBar = new System.Windows.Forms.TrackBar();
+            this.maxtrackBar = new System.Windows.Forms.TrackBar();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.minlabel = new System.Windows.Forms.Label();
+            this.maxlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hpImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lpImg)).BeginInit();
@@ -74,6 +83,8 @@ namespace TableVision
             ((System.ComponentModel.ISupportInitialize)(this.noisetrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmptrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThresholdtrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mintrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxtrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // backgroundImg
@@ -186,7 +197,7 @@ namespace TableVision
             // 
             this.sourceLabel.AutoSize = true;
             this.sourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.sourceLabel.Location = new System.Drawing.Point(180, 21);
+            this.sourceLabel.Location = new System.Drawing.Point(204, 21);
             this.sourceLabel.Name = "sourceLabel";
             this.sourceLabel.Size = new System.Drawing.Size(60, 20);
             this.sourceLabel.TabIndex = 14;
@@ -196,7 +207,7 @@ namespace TableVision
             // 
             this.outputLabel.AutoSize = true;
             this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.outputLabel.Location = new System.Drawing.Point(757, 21);
+            this.outputLabel.Location = new System.Drawing.Point(732, 21);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(58, 20);
             this.outputLabel.TabIndex = 15;
@@ -205,7 +216,7 @@ namespace TableVision
             // lptrackBar
             // 
             this.lptrackBar.LargeChange = 0;
-            this.lptrackBar.Location = new System.Drawing.Point(1052, 106);
+            this.lptrackBar.Location = new System.Drawing.Point(1052, 87);
             this.lptrackBar.Maximum = 15;
             this.lptrackBar.Name = "lptrackBar";
             this.lptrackBar.Size = new System.Drawing.Size(237, 45);
@@ -218,20 +229,20 @@ namespace TableVision
             // hptrackBar
             // 
             this.hptrackBar.LargeChange = 2;
-            this.hptrackBar.Location = new System.Drawing.Point(1052, 179);
-            this.hptrackBar.Maximum = 100;
+            this.hptrackBar.Location = new System.Drawing.Point(1052, 154);
+            this.hptrackBar.Maximum = 200;
             this.hptrackBar.Name = "hptrackBar";
             this.hptrackBar.Size = new System.Drawing.Size(237, 45);
             this.hptrackBar.TabIndex = 7;
             this.hptrackBar.TickFrequency = 2;
-            this.hptrackBar.Value = 14;
+            this.hptrackBar.Value = 29;
             this.hptrackBar.Scroll += new System.EventHandler(this.hptrackBar_Scroll);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(997, 60);
+            this.label1.Location = new System.Drawing.Point(993, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 18;
@@ -241,7 +252,7 @@ namespace TableVision
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(993, 156);
+            this.label2.Location = new System.Drawing.Point(989, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 19;
@@ -250,7 +261,7 @@ namespace TableVision
             // noisetrackBar
             // 
             this.noisetrackBar.LargeChange = 2;
-            this.noisetrackBar.Location = new System.Drawing.Point(1052, 230);
+            this.noisetrackBar.Location = new System.Drawing.Point(1052, 215);
             this.noisetrackBar.Maximum = 30;
             this.noisetrackBar.Name = "noisetrackBar";
             this.noisetrackBar.Size = new System.Drawing.Size(237, 45);
@@ -262,20 +273,20 @@ namespace TableVision
             // AmptrackBar
             // 
             this.AmptrackBar.LargeChange = 2;
-            this.AmptrackBar.Location = new System.Drawing.Point(1052, 351);
-            this.AmptrackBar.Maximum = 150;
+            this.AmptrackBar.Location = new System.Drawing.Point(1052, 286);
+            this.AmptrackBar.Maximum = 300;
             this.AmptrackBar.Name = "AmptrackBar";
             this.AmptrackBar.Size = new System.Drawing.Size(237, 45);
             this.AmptrackBar.TabIndex = 21;
             this.AmptrackBar.TickFrequency = 2;
-            this.AmptrackBar.Value = 95;
+            this.AmptrackBar.Value = 190;
             this.AmptrackBar.Scroll += new System.EventHandler(this.AmptrackBar_Scroll);
             // 
             // amplabel
             // 
             this.amplabel.AutoSize = true;
             this.amplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.amplabel.Location = new System.Drawing.Point(993, 308);
+            this.amplabel.Location = new System.Drawing.Point(989, 240);
             this.amplabel.Name = "amplabel";
             this.amplabel.Size = new System.Drawing.Size(70, 20);
             this.amplabel.TabIndex = 22;
@@ -285,7 +296,7 @@ namespace TableVision
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(1019, 179);
+            this.label3.Location = new System.Drawing.Point(1019, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 20);
             this.label3.TabIndex = 23;
@@ -295,7 +306,7 @@ namespace TableVision
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(1019, 230);
+            this.label4.Location = new System.Drawing.Point(1019, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 24;
@@ -305,7 +316,7 @@ namespace TableVision
             // 
             this.bvalue.AutoSize = true;
             this.bvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bvalue.Location = new System.Drawing.Point(1284, 179);
+            this.bvalue.Location = new System.Drawing.Point(1284, 154);
             this.bvalue.Name = "bvalue";
             this.bvalue.Size = new System.Drawing.Size(27, 20);
             this.bvalue.TabIndex = 25;
@@ -315,7 +326,7 @@ namespace TableVision
             // 
             this.nvalue.AutoSize = true;
             this.nvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.nvalue.Location = new System.Drawing.Point(1284, 230);
+            this.nvalue.Location = new System.Drawing.Point(1284, 215);
             this.nvalue.Name = "nvalue";
             this.nvalue.Size = new System.Drawing.Size(18, 20);
             this.nvalue.TabIndex = 26;
@@ -325,7 +336,7 @@ namespace TableVision
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(1014, 80);
+            this.label5.Location = new System.Drawing.Point(1019, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 27;
@@ -335,7 +346,7 @@ namespace TableVision
             // 
             this.svalue.AutoSize = true;
             this.svalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.svalue.Location = new System.Drawing.Point(1284, 106);
+            this.svalue.Location = new System.Drawing.Point(1284, 87);
             this.svalue.Name = "svalue";
             this.svalue.Size = new System.Drawing.Size(18, 20);
             this.svalue.TabIndex = 28;
@@ -345,7 +356,7 @@ namespace TableVision
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(1019, 328);
+            this.label6.Location = new System.Drawing.Point(1019, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 20);
             this.label6.TabIndex = 29;
@@ -355,17 +366,17 @@ namespace TableVision
             // 
             this.tvalue.AutoSize = true;
             this.tvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.tvalue.Location = new System.Drawing.Point(1284, 351);
+            this.tvalue.Location = new System.Drawing.Point(1284, 286);
             this.tvalue.Name = "tvalue";
             this.tvalue.Size = new System.Drawing.Size(36, 20);
             this.tvalue.TabIndex = 30;
-            this.tvalue.Text = "191";
+            this.tvalue.Text = "190";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.Location = new System.Drawing.Point(993, 399);
+            this.label7.Location = new System.Drawing.Point(989, 328);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 20);
             this.label7.TabIndex = 31;
@@ -374,30 +385,133 @@ namespace TableVision
             // ThresholdtrackBar
             // 
             this.ThresholdtrackBar.LargeChange = 2;
-            this.ThresholdtrackBar.Location = new System.Drawing.Point(1052, 422);
-            this.ThresholdtrackBar.Maximum = 127;
+            this.ThresholdtrackBar.Location = new System.Drawing.Point(1052, 354);
+            this.ThresholdtrackBar.Maximum = 255;
             this.ThresholdtrackBar.Name = "ThresholdtrackBar";
             this.ThresholdtrackBar.Size = new System.Drawing.Size(237, 45);
             this.ThresholdtrackBar.TabIndex = 32;
             this.ThresholdtrackBar.TickFrequency = 2;
-            this.ThresholdtrackBar.Value = 94;
+            this.ThresholdtrackBar.Value = 189;
             this.ThresholdtrackBar.Scroll += new System.EventHandler(this.ThresholdtrackBar_Scroll);
             // 
             // thresholdvalue
             // 
             this.thresholdvalue.AutoSize = true;
             this.thresholdvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.thresholdvalue.Location = new System.Drawing.Point(1284, 422);
+            this.thresholdvalue.Location = new System.Drawing.Point(1284, 354);
             this.thresholdvalue.Name = "thresholdvalue";
             this.thresholdvalue.Size = new System.Drawing.Size(36, 20);
             this.thresholdvalue.TabIndex = 33;
             this.thresholdvalue.Text = "189";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1038, 517);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Pause";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1129, 517);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 23);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Reset background";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label8.Location = new System.Drawing.Point(989, 388);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 20);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Blob area";
+            // 
+            // mintrackBar
+            // 
+            this.mintrackBar.LargeChange = 2;
+            this.mintrackBar.Location = new System.Drawing.Point(1052, 411);
+            this.mintrackBar.Maximum = 500;
+            this.mintrackBar.Name = "mintrackBar";
+            this.mintrackBar.Size = new System.Drawing.Size(237, 45);
+            this.mintrackBar.TabIndex = 37;
+            this.mintrackBar.TickFrequency = 2;
+            this.mintrackBar.Value = 90;
+            this.mintrackBar.Scroll += new System.EventHandler(this.mintrackBar_Scroll);
+            // 
+            // maxtrackBar
+            // 
+            this.maxtrackBar.LargeChange = 2;
+            this.maxtrackBar.Location = new System.Drawing.Point(1052, 449);
+            this.maxtrackBar.Maximum = 1000;
+            this.maxtrackBar.Name = "maxtrackBar";
+            this.maxtrackBar.Size = new System.Drawing.Size(237, 45);
+            this.maxtrackBar.TabIndex = 38;
+            this.maxtrackBar.TickFrequency = 2;
+            this.maxtrackBar.Value = 189;
+            this.maxtrackBar.Scroll += new System.EventHandler(this.maxtrackBar_Scroll);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.Location = new System.Drawing.Point(1019, 411);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 20);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "min";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label10.Location = new System.Drawing.Point(1019, 449);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 20);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "max";
+            // 
+            // minlabel
+            // 
+            this.minlabel.AutoSize = true;
+            this.minlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.minlabel.Location = new System.Drawing.Point(1284, 411);
+            this.minlabel.Name = "minlabel";
+            this.minlabel.Size = new System.Drawing.Size(27, 20);
+            this.minlabel.TabIndex = 41;
+            this.minlabel.Text = "90";
+            // 
+            // maxlabel
+            // 
+            this.maxlabel.AutoSize = true;
+            this.maxlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.maxlabel.Location = new System.Drawing.Point(1284, 449);
+            this.maxlabel.Name = "maxlabel";
+            this.maxlabel.Size = new System.Drawing.Size(36, 20);
+            this.maxlabel.TabIndex = 42;
+            this.maxlabel.Text = "189";
             // 
             // VisionFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 552);
+            this.Controls.Add(this.maxlabel);
+            this.Controls.Add(this.minlabel);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.maxtrackBar);
+            this.Controls.Add(this.mintrackBar);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.thresholdvalue);
             this.Controls.Add(this.ThresholdtrackBar);
             this.Controls.Add(this.label7);
@@ -444,6 +558,8 @@ namespace TableVision
             ((System.ComponentModel.ISupportInitialize)(this.noisetrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmptrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThresholdtrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mintrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxtrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,6 +599,15 @@ namespace TableVision
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TrackBar ThresholdtrackBar;
         private System.Windows.Forms.Label thresholdvalue;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TrackBar mintrackBar;
+        private System.Windows.Forms.TrackBar maxtrackBar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label minlabel;
+        private System.Windows.Forms.Label maxlabel;
     }
 }
 
