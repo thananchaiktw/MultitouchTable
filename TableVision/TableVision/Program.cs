@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DirectShowLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,14 @@ namespace TableVision
         [STAThread]
         static void Main()
         {
+            /*DsDevice[] captureDevices;
+
+            // Get the set of directshow devices that are video inputs.
+            captureDevices = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);
+            for (int idx = 0; idx < captureDevices.Length; idx++)
+            {
+                Console.WriteLine(captureDevices[idx].Name);
+            }*/
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new VisionFrom());

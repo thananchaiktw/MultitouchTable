@@ -62,7 +62,7 @@ namespace TableVision
             this.label7 = new System.Windows.Forms.Label();
             this.ThresholdtrackBar = new System.Windows.Forms.TrackBar();
             this.thresholdvalue = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.calibrateButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.mintrackBar = new System.Windows.Forms.TrackBar();
@@ -71,6 +71,8 @@ namespace TableVision
             this.label10 = new System.Windows.Forms.Label();
             this.minlabel = new System.Windows.Forms.Label();
             this.maxlabel = new System.Windows.Forms.Label();
+            this.choose_cams = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hpImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lpImg)).BeginInit();
@@ -275,6 +277,7 @@ namespace TableVision
             this.AmptrackBar.LargeChange = 2;
             this.AmptrackBar.Location = new System.Drawing.Point(1052, 286);
             this.AmptrackBar.Maximum = 300;
+            this.AmptrackBar.Minimum = 1;
             this.AmptrackBar.Name = "AmptrackBar";
             this.AmptrackBar.Size = new System.Drawing.Size(237, 45);
             this.AmptrackBar.TabIndex = 21;
@@ -404,15 +407,15 @@ namespace TableVision
             this.thresholdvalue.TabIndex = 33;
             this.thresholdvalue.Text = "189";
             // 
-            // button1
+            // calibrateButton
             // 
-            this.button1.Location = new System.Drawing.Point(1038, 517);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Pause";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.calibrateButton.Location = new System.Drawing.Point(1038, 517);
+            this.calibrateButton.Name = "calibrateButton";
+            this.calibrateButton.Size = new System.Drawing.Size(75, 23);
+            this.calibrateButton.TabIndex = 34;
+            this.calibrateButton.Text = "Calibrate";
+            this.calibrateButton.UseVisualStyleBackColor = true;
+            this.calibrateButton.Click += new System.EventHandler(this.calibrateButton_Click);
             // 
             // button2
             // 
@@ -498,11 +501,35 @@ namespace TableVision
             this.maxlabel.TabIndex = 42;
             this.maxlabel.Text = "189";
             // 
+            // choose_cams
+            // 
+            this.choose_cams.Location = new System.Drawing.Point(1038, 488);
+            this.choose_cams.Name = "choose_cams";
+            this.choose_cams.Size = new System.Drawing.Size(106, 23);
+            this.choose_cams.TabIndex = 43;
+            this.choose_cams.Text = "Choose Camera";
+            this.choose_cams.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1151, 488);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 44;
+            for (int i = 0; i < cam_device.Length; i++)
+            {
+                this.comboBox1.Items.Add(cam_device[i].Name.ToString());
+            }
+            this.comboBox1.SelectedIndex = 0;
+            // 
             // VisionFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 552);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.choose_cams);
             this.Controls.Add(this.maxlabel);
             this.Controls.Add(this.minlabel);
             this.Controls.Add(this.label10);
@@ -511,7 +538,7 @@ namespace TableVision
             this.Controls.Add(this.mintrackBar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.calibrateButton);
             this.Controls.Add(this.thresholdvalue);
             this.Controls.Add(this.ThresholdtrackBar);
             this.Controls.Add(this.label7);
@@ -599,7 +626,7 @@ namespace TableVision
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TrackBar ThresholdtrackBar;
         private System.Windows.Forms.Label thresholdvalue;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button calibrateButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TrackBar mintrackBar;
@@ -608,6 +635,8 @@ namespace TableVision
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label minlabel;
         private System.Windows.Forms.Label maxlabel;
+        private System.Windows.Forms.Button choose_cams;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

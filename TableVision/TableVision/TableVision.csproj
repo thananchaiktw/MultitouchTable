@@ -53,6 +53,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DirectShowLib-2005">
+      <HintPath>..\..\..\..\..\Desktop\OpticalFlow_Capture - Farneback\OpticalFlow_Capture - Farneback\OpticalFlow_Capture\Lib\DirectShowLib-2005.dll</HintPath>
+    </Reference>
     <Reference Include="Emgu.CV.DebuggerVisualizers.VS2015">
       <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2282\bin\Emgu.CV.DebuggerVisualizers.VS2015.dll</HintPath>
     </Reference>
@@ -64,6 +67,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,9 +79,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CameraCapture.cs" />
     <Compile Include="DetectBlob.cs" />
     <Compile Include="Filter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="OSC.NET\OSCBundle.cs" />
     <Compile Include="OSC.NET\OSCMessage.cs" />
     <Compile Include="OSC.NET\OSCPacket.cs" />

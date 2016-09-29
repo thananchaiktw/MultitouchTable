@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Emgu.CV;
+﻿using Emgu.CV;
 using Emgu.CV.Structure;
+
 
 namespace TableVision
 {
@@ -20,29 +16,29 @@ namespace TableVision
 
         public Image<Gray, byte> Gaussian(Image<Gray, byte> source,int ksize)
         {
-            
-            return source.SmoothGaussian(ksize);
+
+            return source.SmoothBlur(ksize, ksize);
         }
 
         public Image<Gray, byte> HighPass(Image<Gray, byte> source,int size,int ksize)
         {
             Image<Gray, byte> result;
-            result = source.SmoothBlur(size,size);
+            result = source.SmoothGaussian(size);
             result = source.Sub(result);
-            result = result.SmoothGaussian(ksize);
-            result = result.SmoothMedian(ksize);
+            result = result.SmoothBlur(ksize, ksize);
+            //result = result.Erode(1);
             //result.Dilate(3);
             return result;
         }
 
         public Image<Gray, byte> Amplifly(Image<Gray, byte> source, double scale)
         {
-            return source.ConvertScale<byte>(0.04,0).Mul(scale).SmoothBlur(3,3);
+            return source/*.InRange(new Gray(100), new Gray(255))*/.Mul(scale);
         }
 
-        public Image<Gray, byte> Threshold(Image<Gray, byte> source,int bsize,int param)
+        public Image<Gray, byte> Threshold(Image<Gray, byte> source,int min)
         {
-            return source.ThresholdAdaptive(new Gray(255), Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.Binary, bsize,new Gray(param));
+            return source.ThresholdBinary(new Gray(min), new Gray(255));/*source.ThresholdAdaptive(new Gray(255), Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.Binary, bsize,new Gray(param));*/
         }
 
     }
